@@ -9,43 +9,37 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as RendaextraRouteImport } from './routes/rendaextra'
-import { Route as LoginRouteImport } from './routes/login'
-import { Route as CadastroRouteImport } from './routes/cadastro'
-import { Route as AdministracaoRouteImport } from './routes/administracao'
-import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as UploadsSplatRouteImport } from './routes/uploads/$'
-import { Route as RedefinirSenhaTokenRouteImport } from './routes/redefinir-senha.$token'
-import { Route as ObObrigadoRouteImport } from './routes/ob/obrigado'
-import { Route as AtivarTokenRouteImport } from './routes/ativar.$token'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
+import { Route as AdministracaoRouteImport } from './routes/administracao'
+import { Route as CadastroRouteImport } from './routes/cadastro'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as RendaextraRouteImport } from './routes/rendaextra'
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
-import { Route as ApiPublicLocalImagesRouteImport } from './routes/api/public/local-images'
-import { Route as ApiPublicCertCheckRouteImport } from './routes/api/public/cert-check'
-import { Route as AuthenticatedSitesNovoRouteImport } from './routes/_authenticated/sites.novo'
+import { Route as AtivarTokenRouteImport } from './routes/ativar.$token'
+import { Route as ObObrigadoRouteImport } from './routes/ob/obrigado'
+import { Route as RedefinirSenhaTokenRouteImport } from './routes/redefinir-senha.$token'
+import { Route as UploadsSplatRouteImport } from './routes/uploads/$'
 import { Route as AuthenticatedSitesIdRouteImport } from './routes/_authenticated/sites.$id'
-import { Route as ApiPublicWebhooksKiwifyRouteImport } from './routes/api/public/webhooks/kiwify'
-import { Route as ApiPublicWebhooksInfinitepayRouteImport } from './routes/api/public/webhooks/infinitepay'
-import { Route as ApiPublicSiteSlugRouteImport } from './routes/api/public/site/$slug'
-import { Route as ApiPublicImgSplatRouteImport } from './routes/api/public/img/$'
-import { Route as ApiPublicCronSubscriptionsRouteImport } from './routes/api/public/cron/subscriptions'
-import { Route as ApiPublicCronInboxSyncRouteImport } from './routes/api/public/cron/inbox-sync'
-import { Route as ApiPublicCronEmailOutboxRouteImport } from './routes/api/public/cron/email-outbox'
+import { Route as AuthenticatedSitesNovoRouteImport } from './routes/_authenticated/sites.novo'
+import { Route as ApiPublicCertCheckRouteImport } from './routes/api/public/cert-check'
+import { Route as ApiPublicLocalImagesRouteImport } from './routes/api/public/local-images'
 import { Route as ApiPublicAssetsSplatRouteImport } from './routes/api/public/assets/$'
+import { Route as ApiPublicCronEmailOutboxRouteImport } from './routes/api/public/cron/email-outbox'
+import { Route as ApiPublicCronInboxSyncRouteImport } from './routes/api/public/cron/inbox-sync'
+import { Route as ApiPublicCronSubscriptionsRouteImport } from './routes/api/public/cron/subscriptions'
+import { Route as ApiPublicImgSplatRouteImport } from './routes/api/public/img/$'
+import { Route as ApiPublicSiteSlugRouteImport } from './routes/api/public/site/$slug'
+import { Route as ApiPublicWebhooksInfinitepayRouteImport } from './routes/api/public/webhooks/infinitepay'
+import { Route as ApiPublicWebhooksKiwifyRouteImport } from './routes/api/public/webhooks/kiwify'
 
-const RendaextraRoute = RendaextraRouteImport.update({
-  id: '/rendaextra',
-  path: '/rendaextra',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LoginRoute = LoginRouteImport.update({
-  id: '/login',
-  path: '/login',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CadastroRoute = CadastroRouteImport.update({
-  id: '/cadastro',
-  path: '/cadastro',
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdministracaoRoute = AdministracaoRouteImport.update({
@@ -53,33 +47,19 @@ const AdministracaoRoute = AdministracaoRouteImport.update({
   path: '/administracao',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
-  id: '/_authenticated',
+const CadastroRoute = CadastroRouteImport.update({
+  id: '/cadastro',
+  path: '/cadastro',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
-const UploadsSplatRoute = UploadsSplatRouteImport.update({
-  id: '/uploads/$',
-  path: '/uploads/$',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RedefinirSenhaTokenRoute = RedefinirSenhaTokenRouteImport.update({
-  id: '/redefinir-senha/$token',
-  path: '/redefinir-senha/$token',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ObObrigadoRoute = ObObrigadoRouteImport.update({
-  id: '/ob/obrigado',
-  path: '/ob/obrigado',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AtivarTokenRoute = AtivarTokenRouteImport.update({
-  id: '/ativar/$token',
-  path: '/ativar/$token',
+const RendaextraRoute = RendaextraRouteImport.update({
+  id: '/rendaextra',
+  path: '/rendaextra',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AuthenticatedDashboardRoute = AuthenticatedDashboardRouteImport.update({
@@ -87,56 +67,49 @@ const AuthenticatedDashboardRoute = AuthenticatedDashboardRouteImport.update({
   path: '/dashboard',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
-const ApiPublicLocalImagesRoute = ApiPublicLocalImagesRouteImport.update({
-  id: '/api/public/local-images',
-  path: '/api/public/local-images',
+const AtivarTokenRoute = AtivarTokenRouteImport.update({
+  id: '/ativar/$token',
+  path: '/ativar/$token',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiPublicCertCheckRoute = ApiPublicCertCheckRouteImport.update({
-  id: '/api/public/cert-check',
-  path: '/api/public/cert-check',
+const ObObrigadoRoute = ObObrigadoRouteImport.update({
+  id: '/ob/obrigado',
+  path: '/ob/obrigado',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AuthenticatedSitesNovoRoute = AuthenticatedSitesNovoRouteImport.update({
-  id: '/sites/novo',
-  path: '/sites/novo',
-  getParentRoute: () => AuthenticatedRouteRoute,
+const RedefinirSenhaTokenRoute = RedefinirSenhaTokenRouteImport.update({
+  id: '/redefinir-senha/$token',
+  path: '/redefinir-senha/$token',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UploadsSplatRoute = UploadsSplatRouteImport.update({
+  id: '/uploads/$',
+  path: '/uploads/$',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const AuthenticatedSitesIdRoute = AuthenticatedSitesIdRouteImport.update({
   id: '/sites/$id',
   path: '/sites/$id',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
-const ApiPublicWebhooksKiwifyRoute = ApiPublicWebhooksKiwifyRouteImport.update({
-  id: '/api/public/webhooks/kiwify',
-  path: '/api/public/webhooks/kiwify',
+const AuthenticatedSitesNovoRoute = AuthenticatedSitesNovoRouteImport.update({
+  id: '/sites/novo',
+  path: '/sites/novo',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const ApiPublicCertCheckRoute = ApiPublicCertCheckRouteImport.update({
+  id: '/api/public/cert-check',
+  path: '/api/public/cert-check',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiPublicWebhooksInfinitepayRoute =
-  ApiPublicWebhooksInfinitepayRouteImport.update({
-    id: '/api/public/webhooks/infinitepay',
-    path: '/api/public/webhooks/infinitepay',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ApiPublicSiteSlugRoute = ApiPublicSiteSlugRouteImport.update({
-  id: '/api/public/site/$slug',
-  path: '/api/public/site/$slug',
+const ApiPublicLocalImagesRoute = ApiPublicLocalImagesRouteImport.update({
+  id: '/api/public/local-images',
+  path: '/api/public/local-images',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiPublicImgSplatRoute = ApiPublicImgSplatRouteImport.update({
-  id: '/api/public/img/$',
-  path: '/api/public/img/$',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicCronSubscriptionsRoute =
-  ApiPublicCronSubscriptionsRouteImport.update({
-    id: '/api/public/cron/subscriptions',
-    path: '/api/public/cron/subscriptions',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ApiPublicCronInboxSyncRoute = ApiPublicCronInboxSyncRouteImport.update({
-  id: '/api/public/cron/inbox-sync',
-  path: '/api/public/cron/inbox-sync',
+const ApiPublicAssetsSplatRoute = ApiPublicAssetsSplatRouteImport.update({
+  id: '/api/public/assets/$',
+  path: '/api/public/assets/$',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiPublicCronEmailOutboxRoute =
@@ -145,9 +118,36 @@ const ApiPublicCronEmailOutboxRoute =
     path: '/api/public/cron/email-outbox',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ApiPublicAssetsSplatRoute = ApiPublicAssetsSplatRouteImport.update({
-  id: '/api/public/assets/$',
-  path: '/api/public/assets/$',
+const ApiPublicCronInboxSyncRoute = ApiPublicCronInboxSyncRouteImport.update({
+  id: '/api/public/cron/inbox-sync',
+  path: '/api/public/cron/inbox-sync',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicCronSubscriptionsRoute =
+  ApiPublicCronSubscriptionsRouteImport.update({
+    id: '/api/public/cron/subscriptions',
+    path: '/api/public/cron/subscriptions',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicImgSplatRoute = ApiPublicImgSplatRouteImport.update({
+  id: '/api/public/img/$',
+  path: '/api/public/img/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicSiteSlugRoute = ApiPublicSiteSlugRouteImport.update({
+  id: '/api/public/site/$slug',
+  path: '/api/public/site/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicWebhooksInfinitepayRoute =
+  ApiPublicWebhooksInfinitepayRouteImport.update({
+    id: '/api/public/webhooks/infinitepay',
+    path: '/api/public/webhooks/infinitepay',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicWebhooksKiwifyRoute = ApiPublicWebhooksKiwifyRouteImport.update({
+  id: '/api/public/webhooks/kiwify',
+  path: '/api/public/webhooks/kiwify',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -326,32 +326,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/rendaextra': {
-      id: '/rendaextra'
-      path: '/rendaextra'
-      fullPath: '/rendaextra'
-      preLoaderRoute: typeof RendaextraRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/login': {
-      id: '/login'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof LoginRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cadastro': {
-      id: '/cadastro'
-      path: '/cadastro'
-      fullPath: '/cadastro'
-      preLoaderRoute: typeof CadastroRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/administracao': {
-      id: '/administracao'
-      path: '/administracao'
-      fullPath: '/administracao'
-      preLoaderRoute: typeof AdministracaoRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_authenticated': {
@@ -361,39 +340,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/administracao': {
+      id: '/administracao'
+      path: '/administracao'
+      fullPath: '/administracao'
+      preLoaderRoute: typeof AdministracaoRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/uploads/$': {
-      id: '/uploads/$'
-      path: '/uploads/$'
-      fullPath: '/uploads/$'
-      preLoaderRoute: typeof UploadsSplatRouteImport
+    '/cadastro': {
+      id: '/cadastro'
+      path: '/cadastro'
+      fullPath: '/cadastro'
+      preLoaderRoute: typeof CadastroRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/redefinir-senha/$token': {
-      id: '/redefinir-senha/$token'
-      path: '/redefinir-senha/$token'
-      fullPath: '/redefinir-senha/$token'
-      preLoaderRoute: typeof RedefinirSenhaTokenRouteImport
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/ob/obrigado': {
-      id: '/ob/obrigado'
-      path: '/ob/obrigado'
-      fullPath: '/ob/obrigado'
-      preLoaderRoute: typeof ObObrigadoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ativar/$token': {
-      id: '/ativar/$token'
-      path: '/ativar/$token'
-      fullPath: '/ativar/$token'
-      preLoaderRoute: typeof AtivarTokenRouteImport
+    '/rendaextra': {
+      id: '/rendaextra'
+      path: '/rendaextra'
+      fullPath: '/rendaextra'
+      preLoaderRoute: typeof RendaextraRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_authenticated/dashboard': {
@@ -403,26 +375,33 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedDashboardRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
-    '/api/public/local-images': {
-      id: '/api/public/local-images'
-      path: '/api/public/local-images'
-      fullPath: '/api/public/local-images'
-      preLoaderRoute: typeof ApiPublicLocalImagesRouteImport
+    '/ativar/$token': {
+      id: '/ativar/$token'
+      path: '/ativar/$token'
+      fullPath: '/ativar/$token'
+      preLoaderRoute: typeof AtivarTokenRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/public/cert-check': {
-      id: '/api/public/cert-check'
-      path: '/api/public/cert-check'
-      fullPath: '/api/public/cert-check'
-      preLoaderRoute: typeof ApiPublicCertCheckRouteImport
+    '/ob/obrigado': {
+      id: '/ob/obrigado'
+      path: '/ob/obrigado'
+      fullPath: '/ob/obrigado'
+      preLoaderRoute: typeof ObObrigadoRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/_authenticated/sites/novo': {
-      id: '/_authenticated/sites/novo'
-      path: '/sites/novo'
-      fullPath: '/sites/novo'
-      preLoaderRoute: typeof AuthenticatedSitesNovoRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
+    '/redefinir-senha/$token': {
+      id: '/redefinir-senha/$token'
+      path: '/redefinir-senha/$token'
+      fullPath: '/redefinir-senha/$token'
+      preLoaderRoute: typeof RedefinirSenhaTokenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/uploads/$': {
+      id: '/uploads/$'
+      path: '/uploads/$'
+      fullPath: '/uploads/$'
+      preLoaderRoute: typeof UploadsSplatRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/_authenticated/sites/$id': {
       id: '/_authenticated/sites/$id'
@@ -431,46 +410,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedSitesIdRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
-    '/api/public/webhooks/kiwify': {
-      id: '/api/public/webhooks/kiwify'
-      path: '/api/public/webhooks/kiwify'
-      fullPath: '/api/public/webhooks/kiwify'
-      preLoaderRoute: typeof ApiPublicWebhooksKiwifyRouteImport
+    '/_authenticated/sites/novo': {
+      id: '/_authenticated/sites/novo'
+      path: '/sites/novo'
+      fullPath: '/sites/novo'
+      preLoaderRoute: typeof AuthenticatedSitesNovoRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/api/public/cert-check': {
+      id: '/api/public/cert-check'
+      path: '/api/public/cert-check'
+      fullPath: '/api/public/cert-check'
+      preLoaderRoute: typeof ApiPublicCertCheckRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/public/webhooks/infinitepay': {
-      id: '/api/public/webhooks/infinitepay'
-      path: '/api/public/webhooks/infinitepay'
-      fullPath: '/api/public/webhooks/infinitepay'
-      preLoaderRoute: typeof ApiPublicWebhooksInfinitepayRouteImport
+    '/api/public/local-images': {
+      id: '/api/public/local-images'
+      path: '/api/public/local-images'
+      fullPath: '/api/public/local-images'
+      preLoaderRoute: typeof ApiPublicLocalImagesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/public/site/$slug': {
-      id: '/api/public/site/$slug'
-      path: '/api/public/site/$slug'
-      fullPath: '/api/public/site/$slug'
-      preLoaderRoute: typeof ApiPublicSiteSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/img/$': {
-      id: '/api/public/img/$'
-      path: '/api/public/img/$'
-      fullPath: '/api/public/img/$'
-      preLoaderRoute: typeof ApiPublicImgSplatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/cron/subscriptions': {
-      id: '/api/public/cron/subscriptions'
-      path: '/api/public/cron/subscriptions'
-      fullPath: '/api/public/cron/subscriptions'
-      preLoaderRoute: typeof ApiPublicCronSubscriptionsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/cron/inbox-sync': {
-      id: '/api/public/cron/inbox-sync'
-      path: '/api/public/cron/inbox-sync'
-      fullPath: '/api/public/cron/inbox-sync'
-      preLoaderRoute: typeof ApiPublicCronInboxSyncRouteImport
+    '/api/public/assets/$': {
+      id: '/api/public/assets/$'
+      path: '/api/public/assets/$'
+      fullPath: '/api/public/assets/$'
+      preLoaderRoute: typeof ApiPublicAssetsSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/cron/email-outbox': {
@@ -480,11 +445,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicCronEmailOutboxRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/public/assets/$': {
-      id: '/api/public/assets/$'
-      path: '/api/public/assets/$'
-      fullPath: '/api/public/assets/$'
-      preLoaderRoute: typeof ApiPublicAssetsSplatRouteImport
+    '/api/public/cron/inbox-sync': {
+      id: '/api/public/cron/inbox-sync'
+      path: '/api/public/cron/inbox-sync'
+      fullPath: '/api/public/cron/inbox-sync'
+      preLoaderRoute: typeof ApiPublicCronInboxSyncRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/cron/subscriptions': {
+      id: '/api/public/cron/subscriptions'
+      path: '/api/public/cron/subscriptions'
+      fullPath: '/api/public/cron/subscriptions'
+      preLoaderRoute: typeof ApiPublicCronSubscriptionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/img/$': {
+      id: '/api/public/img/$'
+      path: '/api/public/img/$'
+      fullPath: '/api/public/img/$'
+      preLoaderRoute: typeof ApiPublicImgSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/site/$slug': {
+      id: '/api/public/site/$slug'
+      path: '/api/public/site/$slug'
+      fullPath: '/api/public/site/$slug'
+      preLoaderRoute: typeof ApiPublicSiteSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/webhooks/infinitepay': {
+      id: '/api/public/webhooks/infinitepay'
+      path: '/api/public/webhooks/infinitepay'
+      fullPath: '/api/public/webhooks/infinitepay'
+      preLoaderRoute: typeof ApiPublicWebhooksInfinitepayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/webhooks/kiwify': {
+      id: '/api/public/webhooks/kiwify'
+      path: '/api/public/webhooks/kiwify'
+      fullPath: '/api/public/webhooks/kiwify'
+      preLoaderRoute: typeof ApiPublicWebhooksKiwifyRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
